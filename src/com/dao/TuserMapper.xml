@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespance:sql隔离 -->
+<mapper namespace="com.dao.TuserMapper">
+    <select id="selectall" resultType="tuser">
+    select * from tuser;
+    </select>
+    <insert id="add" parameterType="tuser">
+    insert into tuser(uname,password) values(#{uname},#{password})
+    </insert>
+</mapper>

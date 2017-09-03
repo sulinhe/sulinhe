@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespance:sql隔离 -->
+<mapper namespace="com.dao.TgoodsMapper">
+    <select id="selectall" resultType="tgoods">
+    select * from tgoods;
+    </select>
+    <update id="update" >
+   update tgoods set account=#{account} where gid=#{gid}
+    </update> 
+    
+     <select id="select" resultType="tgoods" parameterType="int">
+    select * from tgoods where gid=#{gid};
+    </select>
+   
+</mapper>
